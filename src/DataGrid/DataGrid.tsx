@@ -15,7 +15,8 @@
 
 import React from 'react';
 import {
-  DataGrid as MuiDataGrid, DataGridProps as MuiDataGridProps, gridClasses, GridColDef, GridSlots,
+  DataGrid as MuiDataGrid, DataGridProps as MuiDataGridProps, gridClasses, GridColDef,
+  GridSlotsComponent,
 } from '@mui/x-data-grid';
 import { styled } from '@mui/material';
 import Checkbox from '../Checkbox';
@@ -740,12 +741,12 @@ const DataGrid = ({
     );
   };
 
-  const componentsOverride: Partial<GridSlotsComponent> = {
-    BaseCheckbox: Checkbox,
-    ColumnSortedAscendingIcon,
-    ColumnSortedDescendingIcon,
-    ColumnResizeIcon: DataGridDivider,
-    Pagination: DataGridTablePagination,
+  const slotsOverride: Partial<GridSlotsComponent> = {
+    baseCheckbox: Checkbox,
+    columnSortedAscendingIcon: ColumnSortedAscendingIcon,
+    columnSortedDescendingIcon: ColumnSortedDescendingIcon,
+    columnResizeIcon: DataGridDivider,
+    pagination: DataGridTablePagination,
   };
 
   return (
