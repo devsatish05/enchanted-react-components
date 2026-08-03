@@ -138,15 +138,15 @@ export type CheckboxProps = MuiCheckboxProps & {
   variant?: CheckboxVariants,
 }
 
-const Checkbox = React.forwardRef((props: CheckboxProps, ref: React.Ref<HTMLButtonElement>) => {
+const Checkbox = React.forwardRef(({ ...rawProps }: CheckboxProps, ref: React.Ref<HTMLButtonElement>) => {
+  const props = {
+    variant: CheckboxVariants.WITHOUT_PADDING,
+    indeterminate: false,
+    disabled: false,
+    disableRipple: true,
+    ...rawProps,
+  };
   return <MuiCheckbox ref={ref} {...props} />;
 }) as React.FC<CheckboxProps>;
-
-Checkbox.defaultProps = {
-  variant: CheckboxVariants.WITHOUT_PADDING,
-  indeterminate: false,
-  disabled: false,
-  disableRipple: true,
-};
 
 export default Checkbox;

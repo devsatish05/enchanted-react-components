@@ -57,12 +57,17 @@ const StyledBox = styled(Box)(({ theme }) => {
   };
 });
 
-const ActionButton: React.FC <ActionProps> = ({ ...props }: ActionProps) => {
+const ActionButton: React.FC <ActionProps> = ({
+  label = 'Action',
+  endIcon = false,
+  disabled = false,
+  ...props
+}: ActionProps) => {
   return (
     <StyledBox
       data-testid="action-button"
-      className={props.disabled ? 'disabled' : ''}
-      tabIndex={props.disabled ? -1 : 0}
+      className={disabled ? 'disabled' : ''}
+      tabIndex={disabled ? -1 : 0}
       onClick={(event) => {
         if (props.href) {
           window.open(props.href, '_blank');
@@ -78,25 +83,19 @@ const ActionButton: React.FC <ActionProps> = ({ ...props }: ActionProps) => {
         }
       }}
       role="button"
-      aria-disabled={props.disabled}
+      aria-disabled={disabled}
     >
       <Typography
         variant="caption"
       >
-        {props.label}
+        {label}
       </Typography>
-      {props.endIcon
+      {endIcon
         && (
           <IconCaretDown />
         )}
     </StyledBox>
   );
-};
-
-ActionButton.defaultProps = {
-  label: 'Action',
-  endIcon: false,
-  disabled: false,
 };
 
 export default ActionButton;

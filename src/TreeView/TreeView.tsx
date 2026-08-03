@@ -23,9 +23,13 @@ import { TreeViewContext } from './TreeItem';
 
 export { TreeViewContext, TreeDepthContext } from './TreeItem';
 
+// eslint-why TreeViewProps is a re-export from MUI lab and its generic is not relevant here
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type { TreeViewProps };
 
-export type EnhancedTreeViewProps = TreeViewProps & {
+// eslint-why EnhancedTreeViewProps extends the MUI generic TreeViewProps which requires any
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type EnhancedTreeViewProps = TreeViewProps<any> & {
   /** When false, hides the vertical level-line connecting parent to children. Defaults to true. */
   showLevelLine?: boolean;
   /** When true, all tree items in the tree are disabled. */
@@ -36,8 +40,12 @@ export type EnhancedTreeViewProps = TreeViewProps & {
  * Override out of the box styling from MUI to align with designer theme.
  * @returns override TreeView and TreeItem component styles and props
  */
+// eslint-why MUI theme component overrides require the base Components type which needs any for its generic
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const getMuiTreeViewThemeOverrides = (): Components<Omit<Theme, 'components'>> => {
-  return {
+  // eslint-why inner return cast needs any to satisfy MUI's Components type constraint
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return ({
     MuiTreeView: {
       styleOverrides: {
         root: () => {
@@ -237,23 +245,25 @@ export const getMuiTreeViewThemeOverrides = (): Components<Omit<Theme, 'componen
         },
       },
     },
-  };
+  // eslint-why MUI theme component overrides require the base Components type which needs any for its generic
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } as any) as Components<Omit<Theme, 'components'>>;
 };
 
-const TreeView = React.forwardRef<HTMLUListElement, EnhancedTreeViewProps>(
-  (props: EnhancedTreeViewProps, ref: React.Ref<HTMLUListElement>) => {
+const TreeView = React.forwardRef<HTMLDivElement, EnhancedTreeViewProps>(
+  (props: EnhancedTreeViewProps, ref: React.Ref<HTMLDivElement>) => {
     const {
       defaultCollapseIcon, defaultExpandIcon, onMouseLeave, showLevelLine = true, disabled, ...rest
     } = props;
 
-    const treeRef = React.useRef<HTMLUListElement>(null);
+    const treeRef = React.useRef<HTMLDivElement>(null);
     // Accordion pattern: ref (not state) so MutationObserver callbacks read it synchronously.
     const isKeyboardNav = React.useRef(false);
 
-    const combinedRef = (node: HTMLUListElement) => {
-      (treeRef as React.MutableRefObject<HTMLUListElement | null>).current = node;
+    const combinedRef = (node: HTMLDivElement) => {
+      (treeRef as React.MutableRefObject<HTMLDivElement | null>).current = node;
       if (typeof ref === 'function') ref(node);
-      else if (ref) (ref as React.MutableRefObject<HTMLUListElement | null>).current = node;
+      else if (ref) (ref as React.MutableRefObject<HTMLDivElement | null>).current = node;
     };
 
     // Accordion pattern: window-level keydown/mousedown listeners.
@@ -268,7 +278,7 @@ const TreeView = React.forwardRef<HTMLUListElement, EnhancedTreeViewProps>(
       };
     }, []);
 
-    const handleMouseLeave = (e: React.MouseEvent<HTMLUListElement>) => {
+    const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
       const active = document.activeElement as HTMLElement | null;
       if (active && e.currentTarget.contains(active) && !active.matches(':focus-visible')) {
         active.blur();
@@ -310,7 +320,7 @@ const TreeView = React.forwardRef<HTMLUListElement, EnhancedTreeViewProps>(
     }, []);
 
     // Tab key: if a tree item has Mui-focused, move to its first action button.
-    const handleKeyDown = React.useCallback((e: React.KeyboardEvent<HTMLUListElement>) => {
+    const handleKeyDown = React.useCallback((e: React.KeyboardEvent<HTMLDivElement>) => {
       if (e.key === 'Tab' && !e.shiftKey) {
         const focusedContent = treeRef.current?.querySelector<HTMLElement>('.MuiTreeItem-content.Mui-focused');
         if (focusedContent) {

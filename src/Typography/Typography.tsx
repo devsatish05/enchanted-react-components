@@ -26,17 +26,17 @@ declare module '@mui/material/Typography' {
   }
 }
 
-const Typography = React.forwardRef((props: TypographyProps, ref: React.Ref<HTMLElement>) => {
+const Typography = React.forwardRef((rawProps: TypographyProps, ref: React.Ref<HTMLElement>) => {
+  const props = {
+    align: 'inherit' as TypographyProps['align'],
+    gutterBottom: false,
+    noWrap: false,
+    paragraph: false,
+    variant: 'body1' as TypographyProps['variant'],
+    ...rawProps,
+  };
   return <MuiTypography ref={ref} {...props} />;
 }) as React.FC<TypographyProps & { component?: React.ElementType }>;
-
-Typography.defaultProps = {
-  align: 'inherit',
-  gutterBottom: false,
-  noWrap: false,
-  paragraph: false,
-  variant: 'body1',
-};
 
 export const getMuiTypographyThemeOverrides = (): Components<Omit<Theme, 'components'>> => {
   return {

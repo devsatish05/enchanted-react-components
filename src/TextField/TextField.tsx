@@ -410,8 +410,28 @@ const renderInput = (props: TextFieldProps, setIsFocus: React.Dispatch<React.Set
   );
 };
 
-const TextField = React.forwardRef(({ ...props }: TextFieldProps, forwardRef: React.ForwardedRef<unknown>) => {
+const TextField = React.forwardRef(({ ...rawProps }: TextFieldProps, forwardRef: React.ForwardedRef<unknown>) => {
   const [isFocus, setIsFocus] = React.useState(false);
+  const props = {
+    margin: 'none' as TextFieldProps['margin'],
+    color: 'primary' as TextFieldProps['color'],
+    size: 'medium' as TextFieldProps['size'],
+    label: '',
+    helperText: '',
+    helperIconTooltip: '',
+    placeholder: '',
+    unitLabel: '',
+    required: false,
+    disabled: false,
+    error: false,
+    fullWidth: false,
+    multiline: false,
+    focused: false,
+    autoFocus: false,
+    hiddenLabel: false,
+    nonEdit: false,
+    ...rawProps,
+  };
   if (!props.id) {
     const id = useId();
     props.id = id;
@@ -427,25 +447,5 @@ const TextField = React.forwardRef(({ ...props }: TextFieldProps, forwardRef: Re
     </StyledMuiFormControl>
   );
 }) as React.FC<TextFieldProps>;
-
-TextField.defaultProps = {
-  margin: 'none',
-  color: 'primary',
-  size: 'medium',
-  label: '',
-  helperText: '',
-  helperIconTooltip: '',
-  placeholder: '',
-  unitLabel: '',
-  required: false,
-  disabled: false,
-  error: false,
-  fullWidth: false,
-  multiline: false,
-  focused: false,
-  autoFocus: false,
-  hiddenLabel: false,
-  nonEdit: false,
-};
 
 export default TextField;

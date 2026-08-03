@@ -90,7 +90,7 @@ const IconSlot = ({ className, children }: { className?: string; children: React
   );
 };
 
-const TreeItem = React.forwardRef<HTMLLIElement, EnhancedTreeItemProps>(
+const TreeItem = React.forwardRef<HTMLDivElement, EnhancedTreeItemProps>(
   (
     {
       label,
@@ -115,7 +115,7 @@ const TreeItem = React.forwardRef<HTMLLIElement, EnhancedTreeItemProps>(
 
     // Each item watches its own content for Mui-focused class changes,
     // and shows the ring only when keyboard is being used.
-    const liRef = React.useRef<HTMLLIElement>(null);
+    const liRef = React.useRef<HTMLDivElement>(null);
     const [isFocused, setIsFocused] = React.useState(false);
 
     React.useEffect(() => {
@@ -131,10 +131,10 @@ const TreeItem = React.forwardRef<HTMLLIElement, EnhancedTreeItemProps>(
     }, [usingKeyboardRef]);
 
     // Combine the forwarded ref with our own liRef.
-    const setRef = React.useCallback((node: HTMLLIElement) => {
-      (liRef as React.MutableRefObject<HTMLLIElement | null>).current = node;
+    const setRef = React.useCallback((node: HTMLDivElement) => {
+      (liRef as React.MutableRefObject<HTMLDivElement | null>).current = node;
       if (typeof ref === 'function') ref(node);
-      else if (ref) (ref as React.MutableRefObject<HTMLLIElement | null>).current = node;
+      else if (ref) (ref as React.MutableRefObject<HTMLDivElement | null>).current = node;
     }, [ref]);
 
     const handleActionKeyDown = React.useCallback((e: React.KeyboardEvent) => {

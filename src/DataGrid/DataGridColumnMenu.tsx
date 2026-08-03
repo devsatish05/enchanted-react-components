@@ -15,8 +15,9 @@
 
 import React from 'react';
 import {
-  GridColumnMenuContainer, GridColumnMenuProps as MuiGridColumnMenuProps, GridColumnVisibilityModel, useGridApiContext, GridPreferencePanelsValue,
+  GridColumnMenuProps as MuiGridColumnMenuProps, GridColumnVisibilityModel, useGridApiContext, GridPreferencePanelsValue,
 } from '@mui/x-data-grid';
+import { Paper } from '@mui/material';
 import ArrowUp from '@hcl-software/enchanted-icons/dist/carbon/es/arrow--up';
 import ArrowDown from '@hcl-software/enchanted-icons/dist/carbon/es/arrow--down';
 import ColumnIcon from '@hcl-software/enchanted-icons/dist/carbon/es/column';
@@ -31,20 +32,20 @@ type GridColumnMenuProps = MuiGridColumnMenuProps & {
 }
 
 export const ExtendedGridColumnMenu = ({
-  currentColumn, onSortModelChange, onColumnVisibilityModelChange, columnVisibilityModel, ...rest
+  colDef, onSortModelChange, onColumnVisibilityModelChange, columnVisibilityModel,
 }: GridColumnMenuProps) => {
   const apiContext = useGridApiContext();
 
   const handleSortModelChange = (value: string) => {
-    onSortModelChange([{ field: currentColumn.field, sort: value }]);
+    onSortModelChange([{ field: colDef.field, sort: value }]);
   };
 
   const handleHideColumn = () => {
-    onColumnVisibilityModelChange({ ...columnVisibilityModel, [currentColumn.field]: false });
+    onColumnVisibilityModelChange({ ...columnVisibilityModel, [colDef.field]: false });
   };
 
   return (
-    <GridColumnMenuContainer currentColumn={currentColumn} {...rest}>
+    <Paper elevation={3}>
       <MenuItem onClick={() => { handleSortModelChange('asc'); }}>
         <ArrowUp />
         {' '}
@@ -66,6 +67,6 @@ export const ExtendedGridColumnMenu = ({
         {' '}
         Manage columns
       </MenuItem>
-    </GridColumnMenuContainer>
+    </Paper>
   );
 };

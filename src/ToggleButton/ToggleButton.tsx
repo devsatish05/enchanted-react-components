@@ -38,20 +38,20 @@ export interface ToggleButtonProps extends MuiToggleButtonProps {
   variant?: ToggleButtonVariants,
 }
 
-const ToggleButton = React.forwardRef(({ ...props }: ToggleButtonProps, forwardRef) => {
+const ToggleButton = React.forwardRef(({ ...rawProps }: ToggleButtonProps, forwardRef) => {
+  const props = {
+    variant: ToggleButtonVariants.WITH_PADDING as ToggleButtonProps['variant'],
+    disabled: false,
+    disableFocusRipple: true,
+    disableRipple: true,
+    centerRipple: false,
+    disableTouchRipple: false,
+    focusRipple: false,
+    tabIndex: 0,
+    ...rawProps,
+  };
   return <MuiToggleButton {...props} ref={forwardRef as ((instance: HTMLButtonElement | null) => void)} aria-disabled={props.disabled} />;
 }) as React.FC<ToggleButtonProps>;
-
-ToggleButton.defaultProps = {
-  variant: ToggleButtonVariants.WITH_PADDING,
-  disabled: false,
-  disableFocusRipple: true,
-  disableRipple: true,
-  centerRipple: false,
-  disableTouchRipple: false,
-  focusRipple: false,
-  tabIndex: 0,
-};
 
 export const getMuiToggleButtonThemeOverrides = (): Components<Omit<Theme, 'components'>> => {
   return {
