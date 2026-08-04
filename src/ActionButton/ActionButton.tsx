@@ -57,10 +57,15 @@ const StyledBox = styled(Box)(({ theme }) => {
   };
 });
 
+export const actionButtonDefaultProps: Partial<ActionProps> = {
+  label: 'Action',
+  endIcon: false,
+  disabled: false,
+};
 const ActionButton: React.FC <ActionProps> = ({
-  label = 'Action',
-  endIcon = false,
-  disabled = false,
+  label = actionButtonDefaultProps.label || '',
+  endIcon = actionButtonDefaultProps.endIcon,
+  disabled = actionButtonDefaultProps.disabled,
   ...props
 }: ActionProps) => {
   return (

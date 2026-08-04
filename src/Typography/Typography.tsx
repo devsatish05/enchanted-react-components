@@ -26,13 +26,17 @@ declare module '@mui/material/Typography' {
   }
 }
 
+export const typographyDefaultProps: Partial<TypographyProps> = {
+  align: 'inherit' as TypographyProps['align'],
+  gutterBottom: false,
+  noWrap: false,
+  paragraph: false,
+  variant: 'body1' as TypographyProps['variant'],
+};
+
 const Typography = React.forwardRef((rawProps: TypographyProps, ref: React.Ref<HTMLElement>) => {
   const props = {
-    align: 'inherit' as TypographyProps['align'],
-    gutterBottom: false,
-    noWrap: false,
-    paragraph: false,
-    variant: 'body1' as TypographyProps['variant'],
+    ...typographyDefaultProps,
     ...rawProps,
   };
   return <MuiTypography ref={ref} {...props} />;

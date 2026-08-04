@@ -95,22 +95,22 @@ export default {
 const VisualTestTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => {
   return (
     <Grid container spacing={30}>
-      <Grid item>
+      <Grid>
         <Grid container direction="column">
-          <Grid item paddingBottom={0}>
+          <Grid paddingBottom={0}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               ToggleButtonGroup small
             </Typography>
           </Grid>
           <Divider />
-          <Grid item paddingTop={1}>
+          <Grid paddingTop={1}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Active
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <ToggleButtonGroup
                   size={ToggleButtonGroupSizes.SMALL}
                 >
@@ -138,14 +138,14 @@ const VisualTestTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item paddingTop={1}>
+          <Grid paddingTop={1}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Selected 1st button
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <ToggleButtonGroup
                   size={ToggleButtonGroupSizes.SMALL}
                   value="default1"
@@ -174,14 +174,14 @@ const VisualTestTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item paddingTop={1}>
+          <Grid paddingTop={1}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Selected 2nd button
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <ToggleButtonGroup
                   size={ToggleButtonGroupSizes.SMALL}
                   value="default2"
@@ -210,14 +210,14 @@ const VisualTestTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item paddingTop={1}>
+          <Grid paddingTop={1}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Selected 3rd button
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <ToggleButtonGroup
                   size={ToggleButtonGroupSizes.SMALL}
                   value="default3"
@@ -246,14 +246,14 @@ const VisualTestTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item paddingTop={1}>
+          <Grid paddingTop={1}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Selected 4th button
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <ToggleButtonGroup
                   size={ToggleButtonGroupSizes.SMALL}
                   value="default4"
@@ -282,14 +282,14 @@ const VisualTestTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item paddingTop={1}>
+          <Grid paddingTop={1}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Disabled
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <ToggleButtonGroup
                   size={ToggleButtonGroupSizes.SMALL}
                   disabled
@@ -320,22 +320,22 @@ const VisualTestTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item>
+      <Grid>
         <Grid container direction="column">
-          <Grid item paddingBottom={0}>
+          <Grid paddingBottom={0}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               ToggleButtonGroup medium
             </Typography>
           </Grid>
           <Divider />
-          <Grid item paddingTop={1}>
+          <Grid paddingTop={1}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Active
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <ToggleButtonGroup
                   size={ToggleButtonGroupSizes.MEDIUM}
                 >
@@ -363,14 +363,14 @@ const VisualTestTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item paddingTop={1}>
+          <Grid paddingTop={1}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Selected 1st button
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <ToggleButtonGroup
                   size={ToggleButtonGroupSizes.MEDIUM}
                   value="default1"
@@ -399,14 +399,14 @@ const VisualTestTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item paddingTop={1}>
+          <Grid paddingTop={1}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Selected 2nd button
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <ToggleButtonGroup
                   size={ToggleButtonGroupSizes.MEDIUM}
                   value="default2"
@@ -435,14 +435,14 @@ const VisualTestTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item paddingTop={1}>
+          <Grid paddingTop={1}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Selected 3rd button
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <ToggleButtonGroup
                   size={ToggleButtonGroupSizes.MEDIUM}
                   value="default3"
@@ -471,14 +471,14 @@ const VisualTestTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item paddingTop={1}>
+          <Grid paddingTop={1}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Selected 4th button
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <ToggleButtonGroup
                   size={ToggleButtonGroupSizes.MEDIUM}
                   value="default4"
@@ -507,14 +507,14 @@ const VisualTestTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item paddingTop={1}>
+          <Grid paddingTop={1}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Disabled
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <ToggleButtonGroup
                   size={ToggleButtonGroupSizes.MEDIUM}
                   disabled

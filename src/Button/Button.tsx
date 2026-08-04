@@ -44,18 +44,22 @@ export type ButtonProps = MuiButtonProps & {
   inversecolors?: boolean | 0 | 1,
 }
 
+export const buttonDefaultProps: Partial<ButtonProps> = {
+  variant: ButtonVariants.CONTAINED as ButtonProps['variant'],
+  disableElevation: true,
+  disableFocusRipple: true,
+  fullWidth: false,
+  centerRipple: false,
+  disableRipple: false,
+  disableTouchRipple: false,
+  focusRipple: false,
+  tabIndex: 0,
+  inversecolors: false,
+};
+
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((rawProps, forwardRef) => {
   const props = {
-    variant: ButtonVariants.CONTAINED as ButtonProps['variant'],
-    disableElevation: true,
-    disableFocusRipple: true,
-    fullWidth: false,
-    centerRipple: false,
-    disableRipple: false,
-    disableTouchRipple: false,
-    focusRipple: false,
-    tabIndex: 0,
-    inversecolors: false as ButtonProps['inversecolors'],
+    ...buttonDefaultProps,
     ...rawProps,
   };
   props.inversecolors = props.inversecolors ? 1 : 0;

@@ -80,14 +80,14 @@ export default {
 const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
   return (
     <Grid container spacing={10}>
-      <Grid item>
+      <Grid>
         <Grid container direction="column" spacing={1}>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Contained Warning
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Base
             </Typography>
@@ -99,7 +99,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Icon-close
             </Typography>
@@ -119,7 +119,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Icon-chevron
             </Typography>
@@ -139,7 +139,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Icon-chevron & close
             </Typography>
@@ -165,12 +165,12 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Contained Success
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Base
             </Typography>
@@ -182,7 +182,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Icon-close
             </Typography>
@@ -202,7 +202,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Icon-chevron
             </Typography>
@@ -222,7 +222,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Icon-chevron & close
             </Typography>
@@ -246,12 +246,12 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Contained Error
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Base
             </Typography>
@@ -263,7 +263,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Icon-close
             </Typography>
@@ -283,7 +283,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Icon-chevron
             </Typography>
@@ -303,7 +303,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Icon-chevron & close
             </Typography>
@@ -327,12 +327,12 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Contained Info
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Base
             </Typography>
@@ -344,7 +344,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Icon-close
             </Typography>
@@ -364,7 +364,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Icon-chevron
             </Typography>
@@ -384,7 +384,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Icon-chevron & close
             </Typography>
@@ -410,14 +410,14 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item>
+      <Grid>
         <Grid container direction="column" spacing={1}>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Outlined Warning
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Base
             </Typography>
@@ -429,7 +429,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Icon-close
             </Typography>
@@ -449,7 +449,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Icon-chevron
             </Typography>
@@ -469,7 +469,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Icon-chevron & close
             </Typography>
@@ -493,12 +493,12 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Outlined Success
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Base
             </Typography>
@@ -510,7 +510,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Icon-close
             </Typography>
@@ -530,7 +530,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Icon-chevron
             </Typography>
@@ -550,7 +550,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Icon-chevron & close
             </Typography>
@@ -574,12 +574,12 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Outlined Error
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Base
             </Typography>
@@ -591,7 +591,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Icon-close
             </Typography>
@@ -611,7 +611,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Icon-chevron
             </Typography>
@@ -631,7 +631,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Icon-chevron & close
             </Typography>
@@ -655,12 +655,12 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Outlined Info
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Base
             </Typography>
@@ -672,7 +672,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Icon-close
             </Typography>
@@ -692,7 +692,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Icon-chevron
             </Typography>
@@ -712,7 +712,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               {args.message}
             </Alert>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Icon-chevron & close
             </Typography>

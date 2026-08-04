@@ -154,7 +154,6 @@ const VisualTestTemplate: StoryFn<typeof Panel> = () => {
   return (
     // @ts-ignore
     <Panel
-      {...Panel.defaultProps}
       open
       tabList={tabList}
       togglePanel={() => { return true; }}
@@ -168,7 +167,6 @@ InteractiveExample.parameters = {
   options: { showPanel: true },
 };
 InteractiveExample.args = {
-  ...Panel.defaultProps,
   // @ts-ignore - this attribute is need to disable all controls in the InteractiveExample, but this attribute is not part of the PanelProps
   interactive: true,
   open: true,

@@ -20,7 +20,7 @@ import IconStart from '@hcl-software/enchanted-icons/dist/carbon/es/add';
 import IconEnd from '@hcl-software/enchanted-icons/dist/carbon/es/caret--down';
 import Typography from '../Typography';
 import Divider from '../Divider';
-import Button, { ButtonVariants } from './Button';
+import Button, { buttonDefaultProps, ButtonVariants } from './Button';
 
 export default {
   title: 'Inputs/Button',
@@ -155,22 +155,22 @@ export default {
 const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
   return (
     <Grid container spacing={30}>
-      <Grid item>
+      <Grid>
         <Grid container direction="column">
-          <Grid item paddingBottom={0}>
+          <Grid paddingBottom={0}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Button small Contained
             </Typography>
           </Grid>
           <Divider />
-          <Grid item paddingTop={1}>
+          <Grid paddingTop={1}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Active
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.CONTAINED}
                   size="small"
@@ -178,7 +178,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.CONTAINED}
@@ -187,7 +187,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={4}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.CONTAINED}
@@ -198,14 +198,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Focus
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.CONTAINED}
                   size="small"
@@ -214,7 +214,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.CONTAINED}
@@ -224,7 +224,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.CONTAINED}
@@ -236,14 +236,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Disabled
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.CONTAINED}
                   size="small"
@@ -252,7 +252,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.CONTAINED}
@@ -262,7 +262,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.CONTAINED}
@@ -274,14 +274,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Hover & Focus
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.CONTAINED}
                   size="small"
@@ -290,7 +290,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.CONTAINED}
@@ -300,7 +300,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.CONTAINED}
@@ -312,20 +312,20 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item paddingTop={3}>
+          <Grid paddingTop={3}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Button small Outlined
             </Typography>
           </Grid>
           <Divider />
-          <Grid item paddingTop={1}>
+          <Grid paddingTop={1}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Active
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={3}>
                 <Button
                   variant={ButtonVariants.OUTLINED}
                   size="small"
@@ -333,7 +333,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.OUTLINED}
@@ -342,7 +342,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.OUTLINED}
@@ -353,14 +353,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Focus
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={3}>
                 <Button
                   variant={ButtonVariants.OUTLINED}
                   size="small"
@@ -369,7 +369,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.OUTLINED}
@@ -379,7 +379,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.OUTLINED}
@@ -391,14 +391,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Disabled
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.OUTLINED}
                   size="small"
@@ -407,7 +407,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.OUTLINED}
@@ -417,7 +417,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.OUTLINED}
@@ -429,14 +429,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Hover & Focus
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.OUTLINED}
                   size="small"
@@ -445,7 +445,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.OUTLINED}
@@ -455,7 +455,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.OUTLINED}
@@ -467,20 +467,20 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item paddingTop={3}>
+          <Grid paddingTop={3}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Button small Text
             </Typography>
           </Grid>
           <Divider />
-          <Grid item paddingTop={1}>
+          <Grid paddingTop={1}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Active
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.TEXT}
                   size="small"
@@ -488,7 +488,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.TEXT}
@@ -497,7 +497,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.TEXT}
@@ -508,14 +508,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Focus
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.TEXT}
                   size="small"
@@ -524,7 +524,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.TEXT}
@@ -534,7 +534,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.TEXT}
@@ -546,14 +546,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Disabled
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.TEXT}
                   size="small"
@@ -562,7 +562,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.TEXT}
@@ -572,7 +572,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.TEXT}
@@ -584,14 +584,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Hover & Focus
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.TEXT}
                   size="small"
@@ -600,7 +600,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.TEXT}
@@ -610,7 +610,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.TEXT}
@@ -624,22 +624,22 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item>
+      <Grid>
         <Grid container direction="column">
-          <Grid item paddingBottom={0}>
+          <Grid paddingBottom={0}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Button medium Contained
             </Typography>
           </Grid>
           <Divider />
-          <Grid item paddingTop={1}>
+          <Grid paddingTop={1}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Active
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.CONTAINED}
                   size="medium"
@@ -647,7 +647,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.CONTAINED}
@@ -656,7 +656,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.CONTAINED}
@@ -667,14 +667,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Focus
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.CONTAINED}
                   size="medium"
@@ -683,7 +683,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.CONTAINED}
@@ -693,7 +693,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.CONTAINED}
@@ -705,14 +705,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Disabled
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.CONTAINED}
                   size="medium"
@@ -721,7 +721,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.CONTAINED}
@@ -731,7 +731,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.CONTAINED}
@@ -743,14 +743,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Hover & Focus
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.CONTAINED}
                   size="medium"
@@ -759,7 +759,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.CONTAINED}
@@ -769,7 +769,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.CONTAINED}
@@ -781,20 +781,20 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item paddingTop={3}>
+          <Grid paddingTop={3}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Button medium Outlined
             </Typography>
           </Grid>
           <Divider />
-          <Grid item paddingTop={1}>
+          <Grid paddingTop={1}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Active
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.OUTLINED}
                   size="medium"
@@ -802,7 +802,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.OUTLINED}
@@ -811,7 +811,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.OUTLINED}
@@ -822,14 +822,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Focus
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.OUTLINED}
                   size="medium"
@@ -838,7 +838,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.OUTLINED}
@@ -848,7 +848,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.OUTLINED}
@@ -860,14 +860,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Disabled
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.OUTLINED}
                   size="medium"
@@ -876,7 +876,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.OUTLINED}
@@ -886,7 +886,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.OUTLINED}
@@ -898,14 +898,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Hover & Focus
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.OUTLINED}
                   size="medium"
@@ -914,7 +914,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.OUTLINED}
@@ -924,7 +924,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.OUTLINED}
@@ -936,20 +936,20 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item paddingTop={3}>
+          <Grid paddingTop={3}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Button medium Text
             </Typography>
           </Grid>
           <Divider />
-          <Grid item paddingTop={1}>
+          <Grid paddingTop={1}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Active
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.TEXT}
                   size="medium"
@@ -957,7 +957,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.TEXT}
@@ -966,7 +966,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.TEXT}
@@ -977,14 +977,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Focus
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.TEXT}
                   size="medium"
@@ -993,7 +993,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.TEXT}
@@ -1003,7 +1003,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.TEXT}
@@ -1015,14 +1015,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Disabled
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.TEXT}
                   size="medium"
@@ -1031,7 +1031,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.TEXT}
@@ -1041,7 +1041,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.TEXT}
@@ -1053,14 +1053,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Hover & Focus
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2}>
+              <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.TEXT}
                   size="medium"
@@ -1069,7 +1069,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.TEXT}
@@ -1079,7 +1079,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.TEXT}
@@ -1093,22 +1093,22 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item>
+      <Grid>
         <Grid container direction="column">
-          <Grid item paddingBottom={0}>
+          <Grid paddingBottom={0}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Button neutral Contained
             </Typography>
           </Grid>
           <Divider />
-          <Grid item paddingTop={1}>
+          <Grid paddingTop={1}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Active
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2} sx={{ py: 2.7 }}>
+              <Grid size={{ xs: 3 }} paddingBottom={2} sx={{ py: 2.7 }}>
                 <Button
                   variant={ButtonVariants.CONTAINED}
                   size="neutral"
@@ -1116,7 +1116,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   px
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2} sx={{ py: 2.7 }}>
+              <Grid size={{ xs: 4 }} paddingBottom={2} sx={{ py: 2.7 }}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.CONTAINED}
@@ -1125,7 +1125,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   px
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2} sx={{ py: 2.7 }}>
+              <Grid size={{ xs: 4 }} paddingBottom={2} sx={{ py: 2.7 }}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.CONTAINED}
@@ -1136,14 +1136,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Focus
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2} sx={{ py: 2.7 }}>
+              <Grid size={{ xs: 3 }} paddingBottom={2} sx={{ py: 2.7 }}>
                 <Button
                   variant={ButtonVariants.CONTAINED}
                   size="neutral"
@@ -1152,7 +1152,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   px
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2} sx={{ py: 2.7 }}>
+              <Grid size={{ xs: 4 }} paddingBottom={2} sx={{ py: 2.7 }}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.CONTAINED}
@@ -1162,7 +1162,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   px
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2} sx={{ py: 2.7 }}>
+              <Grid size={{ xs: 4 }} paddingBottom={2} sx={{ py: 2.7 }}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.CONTAINED}
@@ -1174,14 +1174,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Disabled
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2} sx={{ py: 2.7 }}>
+              <Grid size={{ xs: 3 }} paddingBottom={2} sx={{ py: 2.7 }}>
                 <Button
                   variant={ButtonVariants.CONTAINED}
                   size="neutral"
@@ -1190,7 +1190,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   px
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2} sx={{ py: 2.7 }}>
+              <Grid size={{ xs: 4 }} paddingBottom={2} sx={{ py: 2.7 }}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.CONTAINED}
@@ -1200,7 +1200,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   px
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2} sx={{ py: 2.7 }}>
+              <Grid size={{ xs: 4 }} paddingBottom={2} sx={{ py: 2.7 }}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.CONTAINED}
@@ -1212,14 +1212,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Hover & Focus
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2} sx={{ py: 2.7 }}>
+              <Grid size={{ xs: 3 }} paddingBottom={2} sx={{ py: 2.7 }}>
                 <Button
                   variant={ButtonVariants.CONTAINED}
                   size="neutral"
@@ -1228,7 +1228,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   px
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2} sx={{ py: 2.7 }}>
+              <Grid size={{ xs: 4 }} paddingBottom={2} sx={{ py: 2.7 }}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.CONTAINED}
@@ -1238,7 +1238,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   px
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2} sx={{ py: 2.7 }}>
+              <Grid size={{ xs: 4 }} paddingBottom={2} sx={{ py: 2.7 }}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.CONTAINED}
@@ -1250,20 +1250,20 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item paddingTop={3}>
+          <Grid paddingTop={3}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Button neutral Outlined
             </Typography>
           </Grid>
           <Divider />
-          <Grid item paddingTop={1}>
+          <Grid paddingTop={1}>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Active
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2} sx={{ py: 2.7 }}>
+              <Grid size={{ xs: 3 }} paddingBottom={2} sx={{ py: 2.7 }}>
                 <Button
                   variant={ButtonVariants.OUTLINED}
                   size="neutral"
@@ -1271,7 +1271,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   px
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2} sx={{ py: 2.7 }}>
+              <Grid size={{ xs: 4 }} paddingBottom={2} sx={{ py: 2.7 }}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.OUTLINED}
@@ -1280,7 +1280,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   px
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2} sx={{ py: 2.7 }}>
+              <Grid size={{ xs: 4 }} paddingBottom={2} sx={{ py: 2.7 }}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.OUTLINED}
@@ -1291,14 +1291,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Focus
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2} sx={{ py: 2.7 }}>
+              <Grid size={{ xs: 3 }} paddingBottom={2} sx={{ py: 2.7 }}>
                 <Button
                   variant={ButtonVariants.OUTLINED}
                   size="neutral"
@@ -1307,7 +1307,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   px
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2} sx={{ py: 2.7 }}>
+              <Grid size={{ xs: 4 }} paddingBottom={2} sx={{ py: 2.7 }}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.OUTLINED}
@@ -1317,7 +1317,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   px
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2} sx={{ py: 2.7 }}>
+              <Grid size={{ xs: 4 }} paddingBottom={2} sx={{ py: 2.7 }}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.OUTLINED}
@@ -1329,14 +1329,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Disabled
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2} sx={{ py: 2.7 }}>
+              <Grid size={{ xs: 3 }} paddingBottom={2} sx={{ py: 2.7 }}>
                 <Button
                   variant={ButtonVariants.OUTLINED}
                   size="neutral"
@@ -1345,7 +1345,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   px
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2} sx={{ py: 2.7 }}>
+              <Grid size={{ xs: 4 }} paddingBottom={2} sx={{ py: 2.7 }}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.OUTLINED}
@@ -1355,7 +1355,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   px
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2} sx={{ py: 2.7 }}>
+              <Grid size={{ xs: 4 }} paddingBottom={2} sx={{ py: 2.7 }}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.OUTLINED}
@@ -1367,14 +1367,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography sx={{ color: 'rgba(0, 0, 0, 0.60);' }} variant="body1">
               Hover & Focus
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3} paddingBottom={2} sx={{ py: 2.7 }}>
+              <Grid size={{ xs: 3 }} paddingBottom={2} sx={{ py: 2.7 }}>
                 <Button
                   variant={ButtonVariants.OUTLINED}
                   size="neutral"
@@ -1383,7 +1383,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   px
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2} sx={{ py: 2.7 }}>
+              <Grid size={{ xs: 4 }} paddingBottom={2} sx={{ py: 2.7 }}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.OUTLINED}
@@ -1393,7 +1393,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   px
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2} sx={{ py: 2.7 }}>
+              <Grid size={{ xs: 4 }} paddingBottom={2} sx={{ py: 2.7 }}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.OUTLINED}
@@ -1407,28 +1407,28 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item>
+      <Grid>
         <Grid
           container
           direction="column"
           rowSpacing={1}
           sx={(theme) => {
             return {
-              color: theme.palette.action.inverse,
-              backgroundColor: theme.palette.background.dark,
+              color: theme.palette.text.primary,
+              backgroundColor: theme.palette.background.paper,
               padding: '12px',
             };
           }}
         >
           <Typography>Button on dark background</Typography>
-          <Grid item paddingTop={1}>
+          <Grid paddingTop={1}>
             <Typography sx={{ marginBottom: '8px' }}>
               Active
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3.5} paddingBottom={2}>
+              <Grid size={{ xs: 3.5 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.TEXT}
                   size="medium"
@@ -1437,7 +1437,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.TEXT}
@@ -1447,7 +1447,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.TEXT}
@@ -1459,14 +1459,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item paddingTop={1}>
+          <Grid paddingTop={1}>
             <Typography sx={{ marginBottom: '8px' }}>
               Focus
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3.5} paddingBottom={2}>
+              <Grid size={{ xs: 3.5 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.TEXT}
                   size="medium"
@@ -1476,7 +1476,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.TEXT}
@@ -1487,7 +1487,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.TEXT}
@@ -1500,14 +1500,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item paddingTop={1}>
+          <Grid paddingTop={1}>
             <Typography sx={{ marginBottom: '8px' }}>
               Focus & Hover
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3.5} paddingBottom={2}>
+              <Grid size={{ xs: 3.5 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.TEXT}
                   size="medium"
@@ -1517,7 +1517,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.TEXT}
@@ -1528,7 +1528,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.TEXT}
@@ -1541,14 +1541,14 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item paddingTop={1}>
+          <Grid paddingTop={1}>
             <Typography sx={{ marginBottom: '8px' }}>
               disabled
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Grid container spacing={3}>
-              <Grid item xs={3.5} paddingBottom={2}>
+              <Grid size={{ xs: 3.5 }} paddingBottom={2}>
                 <Button
                   variant={ButtonVariants.TEXT}
                   size="medium"
@@ -1557,7 +1557,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   startIcon={<IconStart />}
                   variant={ButtonVariants.TEXT}
@@ -1567,7 +1567,7 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
                   Button
                 </Button>
               </Grid>
-              <Grid item xs={4} paddingBottom={2}>
+              <Grid size={{ xs: 4 }} paddingBottom={2}>
                 <Button
                   endIcon={<IconEnd />}
                   variant={ButtonVariants.TEXT}
@@ -1588,13 +1588,13 @@ const VisualTestTemplate: StoryFn<typeof Button> = (args) => {
 const InteractiveExampleTemplate: StoryFn<typeof Button> = (args) => {
   return (
     <Grid container spacing={2} paddingBottom={5}>
-      <Grid item xs={2}>
+      <Grid size={{ xs: 2 }}>
         <Button {...args}>Button</Button>
       </Grid>
-      <Grid item xs={2}>
+      <Grid size={{ xs: 2 }}>
         <Button startIcon={<IconStart />} {...args}>Button</Button>
       </Grid>
-      <Grid item xs={2}>
+      <Grid size={{ xs: 2 }}>
         <Button endIcon={<IconEnd />} {...args}>Button</Button>
       </Grid>
     </Grid>
@@ -1606,7 +1606,7 @@ InteractiveExample.parameters = {
   options: { showPanel: true },
 };
 InteractiveExample.args = {
-  ...Button.defaultProps,
+  ...buttonDefaultProps,
   variant: ButtonVariants.TEXT,
   // @ts-ignore - this attribute is need to disable all controls in the InteractiveExample, but this attribute is not part of the ButtonProps
   interactive: true,

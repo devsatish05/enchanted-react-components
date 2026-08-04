@@ -410,26 +410,30 @@ const renderInput = (props: TextFieldProps, setIsFocus: React.Dispatch<React.Set
   );
 };
 
+export const textFieldDefaultProps: Partial<TextFieldProps> = {
+  margin: 'none' as TextFieldProps['margin'],
+  color: 'primary' as TextFieldProps['color'],
+  size: 'medium' as TextFieldProps['size'],
+  label: '',
+  helperText: '',
+  helperIconTooltip: '',
+  placeholder: '',
+  unitLabel: '',
+  required: false,
+  disabled: false,
+  error: false,
+  fullWidth: false,
+  multiline: false,
+  focused: false,
+  autoFocus: false,
+  hiddenLabel: false,
+  nonEdit: false,
+};
+
 const TextField = React.forwardRef(({ ...rawProps }: TextFieldProps, forwardRef: React.ForwardedRef<unknown>) => {
   const [isFocus, setIsFocus] = React.useState(false);
   const props = {
-    margin: 'none' as TextFieldProps['margin'],
-    color: 'primary' as TextFieldProps['color'],
-    size: 'medium' as TextFieldProps['size'],
-    label: '',
-    helperText: '',
-    helperIconTooltip: '',
-    placeholder: '',
-    unitLabel: '',
-    required: false,
-    disabled: false,
-    error: false,
-    fullWidth: false,
-    multiline: false,
-    focused: false,
-    autoFocus: false,
-    hiddenLabel: false,
-    nonEdit: false,
+    ...textFieldDefaultProps,
     ...rawProps,
   };
   if (!props.id) {
