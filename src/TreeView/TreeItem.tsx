@@ -13,9 +13,10 @@
  * limitations under the License.                                           *
  * ======================================================================== */
 import React, { ReactNode } from 'react';
-import MuiTreeItem, { TreeItemProps } from '@mui/lab/TreeItem';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import { TreeItemProps} from '@mui/x-tree-view/TreeItem';
+import { TreeItem2 as MuiTreeItem } from '@mui/x-tree-view/TreeItem2';
 
 /**
  * Context tracking nesting depth (0 = root level).
@@ -90,7 +91,7 @@ const IconSlot = ({ className, children }: { className?: string; children: React
   );
 };
 
-const TreeItem = React.forwardRef<HTMLDivElement, EnhancedTreeItemProps>(
+const TreeItem = React.forwardRef<HTMLLIElement, EnhancedTreeItemProps>(
   (
     {
       label,
@@ -115,7 +116,7 @@ const TreeItem = React.forwardRef<HTMLDivElement, EnhancedTreeItemProps>(
 
     // Each item watches its own content for Mui-focused class changes,
     // and shows the ring only when keyboard is being used.
-    const liRef = React.useRef<HTMLDivElement>(null);
+    const liRef = React.useRef<HTMLLIElement>(null);
     const [isFocused, setIsFocused] = React.useState(false);
 
     React.useEffect(() => {
@@ -131,10 +132,10 @@ const TreeItem = React.forwardRef<HTMLDivElement, EnhancedTreeItemProps>(
     }, [usingKeyboardRef]);
 
     // Combine the forwarded ref with our own liRef.
-    const setRef = React.useCallback((node: HTMLDivElement) => {
-      (liRef as React.MutableRefObject<HTMLDivElement | null>).current = node;
+    const setRef = React.useCallback((node: HTMLLIElement) => {
+      (liRef as React.MutableRefObject<HTMLLIElement | null>).current = node;
       if (typeof ref === 'function') ref(node);
-      else if (ref) (ref as React.MutableRefObject<HTMLDivElement | null>).current = node;
+      else if (ref) (ref as React.MutableRefObject<HTMLLIElement | null>).current = node;
     }, [ref]);
 
     // Get all buttons in a container
@@ -397,7 +398,11 @@ const TreeItem = React.forwardRef<HTMLDivElement, EnhancedTreeItemProps>(
       <MuiTreeItem
         ref={setRef}
         className={isFocused ? 'keyboard-focused' : undefined}
-        ContentProps={contentPaddingLeft !== undefined ? { style: { paddingInlineStart: `${contentPaddingLeft}px` } } : undefined}
+        slotProps={{
+          root: {
+            style: contentPaddingLeft !== undefined ? { paddingInlineStart: `${contentPaddingLeft}px` } : undefined,
+          },
+        }}
         {...props}
         disabled={contextDisabled || disabled}
         label={customLabel}

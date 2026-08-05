@@ -13,9 +13,9 @@
  * limitations under the License.                                           *
  * ======================================================================== */
 import React from 'react';
-import MuiTreeView from '@mui/lab/TreeView';
-import type { TreeViewProps } from '@mui/lab/TreeView';
-import '@mui/lab/themeAugmentation';
+import { SimpleTreeView as MuiTreeView } from '@mui/x-tree-view';
+import type { TreeViewProps } from '@mui/x-tree-view/TreeView';
+import '@mui/x-tree-view/themeAugmentation';
 import { Components, Theme } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import ChevronDownIcon from '@hcl-software/enchanted-icons/dist/carbon/es/chevron--down';
@@ -36,6 +36,10 @@ export type EnhancedTreeViewProps = TreeViewProps<any> & {
   showLevelLine?: boolean;
   /** When true, all tree items in the tree are disabled. */
   disabled?: boolean;
+  /** The icon used to collapse the tree item. */
+  defaultCollapseIcon?: React.ReactNode;
+  /** The icon used to expand the tree item. */
+  defaultExpandIcon?: React.ReactNode;
 };
 
 /**
@@ -252,21 +256,21 @@ export const getMuiTreeViewThemeOverrides = (): Components<Omit<Theme, 'componen
   } as any) as Components<Omit<Theme, 'components'>>;
 };
 
-const TreeView = React.forwardRef<HTMLDivElement, EnhancedTreeViewProps>(
-  (props: EnhancedTreeViewProps, ref: React.Ref<HTMLDivElement>) => {
+const TreeView = React.forwardRef<HTMLUListElement, EnhancedTreeViewProps>(
+  (props: EnhancedTreeViewProps, ref: React.Ref<HTMLUListElement>) => {
     const {
       defaultCollapseIcon, defaultExpandIcon, onMouseLeave, showLevelLine = true, disabled, ...rest
     } = props;
     const theme = useTheme();
 
-    const treeRef = React.useRef<HTMLDivElement>(null);
+    const treeRef = React.useRef<HTMLUListElement>(null);
     // Accordion pattern: ref (not state) so MutationObserver callbacks read it synchronously.
     const isKeyboardNav = React.useRef(false);
 
-    const combinedRef = (node: HTMLDivElement) => {
-      (treeRef as React.MutableRefObject<HTMLDivElement | null>).current = node;
+    const combinedRef = (node: HTMLUListElement) => {
+      (treeRef as React.MutableRefObject<HTMLUListElement | null>).current = node;
       if (typeof ref === 'function') ref(node);
-      else if (ref) (ref as React.MutableRefObject<HTMLDivElement | null>).current = node;
+      else if (ref) (ref as React.MutableRefObject<HTMLUListElement | null>).current = node;
     };
 
     // Accordion pattern: window-level keydown/mousedown listeners.
@@ -281,7 +285,7 @@ const TreeView = React.forwardRef<HTMLDivElement, EnhancedTreeViewProps>(
       };
     }, []);
 
-    const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
+    const handleMouseLeave = (e: React.MouseEvent<HTMLUListElement>) => {
       const active = document.activeElement as HTMLElement | null;
       if (active && e.currentTarget.contains(active) && !active.matches(':focus-visible')) {
         active.blur();
@@ -323,7 +327,7 @@ const TreeView = React.forwardRef<HTMLDivElement, EnhancedTreeViewProps>(
     }, []);
 
     // Tab key: if a tree item has Mui-focused, move to its first action button.
-    const handleKeyDown = React.useCallback((e: React.KeyboardEvent<HTMLDivElement>) => {
+    const handleKeyDown = React.useCallback((e: React.KeyboardEvent<HTMLUListElement>) => {
       if (e.key === 'Tab' && !e.shiftKey) {
         const focusedContent = treeRef.current?.querySelector<HTMLElement>('.MuiTreeItem-content.Mui-focused');
         if (focusedContent) {
@@ -360,8 +364,10 @@ const TreeView = React.forwardRef<HTMLDivElement, EnhancedTreeViewProps>(
       <TreeViewContext.Provider value={contextValue}>
         <MuiTreeView
           ref={combinedRef}
-          defaultCollapseIcon={defaultCollapseIcon ?? <ChevronDownIcon />}
-          defaultExpandIcon={resolvedExpandIcon}
+          slots={{
+            collapseIcon: defaultCollapseIcon ? () => defaultCollapseIcon : ChevronDownIcon,
+            expandIcon: resolvedExpandIcon ? () => resolvedExpandIcon : undefined,
+          }}
           onMouseLeave={handleMouseLeave}
           onKeyDown={handleKeyDown}
           {...rest}
