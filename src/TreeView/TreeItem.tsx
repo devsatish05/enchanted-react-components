@@ -15,7 +15,7 @@
 import React, { ReactNode } from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { TreeItemProps} from '@mui/x-tree-view/TreeItem';
+import { TreeItemProps } from '@mui/x-tree-view/TreeItem';
 import { TreeItem2 as MuiTreeItem } from '@mui/x-tree-view/TreeItem2';
 
 /**

@@ -158,7 +158,7 @@ const Template: StoryFn<ExtendedTreeViewArgs> = (args) => {
 
   const [selected, setSelected] = React.useState<string[]>([]);
 
-  const handleNodeSelect = (_event: React.SyntheticEvent,  itemIds: string | string[] | null) => {
+  const handleNodeSelect = (_event: React.SyntheticEvent, itemIds: string | string[] | null) => {
     if (itemIds === null) {
       setSelected([]);
     } else {

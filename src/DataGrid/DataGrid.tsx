@@ -752,7 +752,7 @@ const DataGrid = ({
   return (
     <StyledDataGrid
       {...props}
-      paginationModel={{page, pageSize}}
+      paginationModel={{ page, pageSize }}
       page={page}
       pageSize={pageSize}
       totalCount={totalCount}

@@ -365,8 +365,8 @@ const TreeView = React.forwardRef<HTMLUListElement, EnhancedTreeViewProps>(
         <MuiTreeView
           ref={combinedRef}
           slots={{
-            collapseIcon: defaultCollapseIcon ? () => defaultCollapseIcon : ChevronDownIcon,
-            expandIcon: resolvedExpandIcon ? () => resolvedExpandIcon : undefined,
+            collapseIcon: defaultCollapseIcon ? () => { return defaultCollapseIcon; } : ChevronDownIcon,
+            expandIcon: resolvedExpandIcon ? () => { return resolvedExpandIcon; } : undefined,
           }}
           onMouseLeave={handleMouseLeave}
           onKeyDown={handleKeyDown}
