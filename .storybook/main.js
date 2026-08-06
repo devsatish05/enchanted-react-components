@@ -13,25 +13,6 @@
  * limitations under the License.                                           *
  * ======================================================================== */
 
-const path = require('path');
-const fs = require('fs');
-
-// Helper to safely resolve a carbon icon path regardless of single/double dash naming
-const resolveCarbonIcon = (iconPath) => {
-  try {
-    const carbonDir = path.dirname(require.resolve('@carbon/icons/package.json'));
-    
-    // Try double dash path first, then single dash path fallback
-    const doubleDashPath = path.join(carbonDir, 'es', `${iconPath.replace(/-/g, '--')}`, '32.js');
-    const singleDashPath = path.join(carbonDir, 'es', `${iconPath}`, '32.js');
-
-    if (fs.existsSync(doubleDashPath)) return doubleDashPath;
-    if (fs.existsSync(singleDashPath)) return singleDashPath;
-  } catch (e) {
-    // Fallback if @carbon/icons isn't resolved directly
-  }
-  return null;
-};
 
 module.exports = {
   "stories": [
@@ -79,22 +60,6 @@ module.exports = {
 
     config.resolve = config.resolve || {};
     
-    // Dynamically map legacy/mismatched carbon icon paths safely
-    const changeCatalog = resolveCarbonIcon('change-catalog');
-    const fileStorage = resolveCarbonIcon('file-storage');
-    const generatePdf = resolveCarbonIcon('generate-pdf');
-    const softwareResource = resolveCarbonIcon('software-resource-resource') || resolveCarbonIcon('software-resource');
-
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      ...(changeCatalog && { '@carbon/icons/es/change-catalog/32': changeCatalog }),
-      ...(fileStorage && { '@carbon/icons/es/file-storage/32': fileStorage }),
-      ...(generatePdf && { '@carbon/icons/es/generate-pdf/32': generatePdf }),
-      ...(softwareResource && { 
-        '@carbon/icons/es/software-resource--resource/32': softwareResource,
-        '@carbon/icons/es/software-resource-resource/32': softwareResource 
-      }),
-    };
 
     return config;
   }
