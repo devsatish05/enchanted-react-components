@@ -41,7 +41,7 @@
     "chromatic": "npx chromatic --project-token=chpt_6f661388be77742"
   },
   "dependencies": {
-    "@carbon/icons": "^11.50.0",
+    "@carbon/icons": "^11.83.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@hcl-software/enchanted-icons": "github:devsatish05/enchanted-icon-dist#4bd142f",

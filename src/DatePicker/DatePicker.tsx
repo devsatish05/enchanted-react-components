@@ -33,7 +33,12 @@ const DEFAULT_FORMAT: string = 'MM/DD/YYYY';
 // Shared formatter used by both static and regular date picker variants — returns the day abbreviation unchanged
 // eslint-why dayOfWeekFormatter receives different types across MUI versions and must accept any
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const dayOfWeekFormatter = (date: any) => { return typeof date === 'string' ? date : String(date); };
+const dayOfWeekFormatter = (date: any) => {
+  if (dayjs.isDayjs(date)) {
+    return date.format('dd'); // or 'ddd' for 3-letter abbreviations ("Sun", "Mon")
+  }
+  return typeof date === 'string' ? date.slice(0, 2) : String(date);
+};
 
 // Number of year columns rendered in the year picker view.
 // Used by handleYearPickerKeyDown to correct arrow-key navigation for the non-static DatePicker.
@@ -173,10 +178,15 @@ const getDatePickerStyle = (theme: Theme, customStyles: React.CSSProperties | { 
       margin: '4px',
       width: 'auto',
     },
-    '& .MuiPaper-root-MuiPickersPopper-paper .MuiDateCalendar-viewTransitionContainer': {
+    '& .MuiPickersPopper-paper, & .MuiDateCalendar-viewTransitionContainer': {
       padding: '0px',
       margin: '0px',
       width: '228px',
+    },
+    '& .MuiPickersArrowSwitcher-root': {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '8px', // Adds proper space between prev (<) and next (>) buttons
     },
     '& .MuiPickersArrowSwitcher-spacer': {
       width: '4px',
@@ -192,6 +202,8 @@ const getDatePickerStyle = (theme: Theme, customStyles: React.CSSProperties | { 
       width: '24px',
       padding: '0px',
       height: '16px',
+      lineHeight: '16px',
+      overflow: 'hidden',
     },
     '& .MuiDateCalendar-viewTransitionContainer': {
       width: '228px',
@@ -365,10 +377,6 @@ const DatePicker = <TDate extends Dayjs = Dayjs>({
     onAccept?.(acceptedValue, context);
   }, [onAccept]);
 
-  const formatValue = (dateValue: Dayjs, dateFormat: string): string => {
-    return dateValue.format(dateFormat);
-  };
-
   /**
    * Corrects Up/Down arrow key navigation in the year picker for the non-static DatePicker.
    * Our CSS renders 3 columns but MUI desktop mode may use a different default.
@@ -434,7 +442,7 @@ const DatePicker = <TDate extends Dayjs = Dayjs>({
     unitLabel,
     hiddenLabel,
     nonEdit,
-    value: value !== null && value !== undefined ? `${formatValue(value as unknown as Dayjs, format || DEFAULT_FORMAT)}` : '',
+    // value: value !== null && value !== undefined ? `${formatValue(value as unknown as Dayjs, format || DEFAULT_FORMAT)}` : '',
     actionProps,
     inputProps: { placeholder: format },
     customIcon,
@@ -492,6 +500,9 @@ const DatePicker = <TDate extends Dayjs = Dayjs>({
       autoFocus={false}
       onOpen={focusDialog}
       dayOfWeekFormatter={dayOfWeekFormatter}
+      sx={{
+        width: fullWidth ? '100%' : '240px',
+      }}
       slots={{
         openPickerIcon: IconCalendar,
         switchViewIcon: CaretDownIcon,
