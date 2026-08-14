@@ -3,6 +3,8 @@
 ## Unreleased
 
 ### Added
+- Added the `endAdornmentIconButton` prop to the `TextField` component to allow for an icon button at the end of the input field, and rearranged the order of the icon buttons.
+- Added the `Calendar` component.
 
 ### Fixed
 - Fixed tooltip cropping in ProgressBar when asset names exceed container width.
@@ -24,6 +26,7 @@
 ### Added
 - Added the `SnackbarGroup` component and its associated tests.
 - Added RTL icon support to the TreeView component and enabled keyboard navigation for hidden icons.
+
 
 ### Fixed
 - Fixed Select dropdown menu positioning and overlap by anchoring to the bottom of the input field.

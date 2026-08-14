@@ -17,6 +17,7 @@ import React from 'react';
 import { StoryFn, Meta } from '@storybook/react-webpack5';
 import CaretDownIcon from '@hcl-software/enchanted-icons/dist/carbon/es/caret--down';
 import InformationIcon from '@hcl-software/enchanted-icons/dist/carbon/es/information';
+import PopupIcon from '@hcl-software/enchanted-icons/dist/carbon/es/popup';
 
 import InputAdornment from '@mui/material/InputAdornment';
 import { Box, SvgIconProps } from '@mui/material';
@@ -24,6 +25,7 @@ import TextField, { textFieldDefaultProps } from './TextField';
 import Button from '../Button';
 
 import UnitSelector from '../prerequisite_components/UnitSelector/UnitSelector';
+import IconButton from '../IconButton';
 
 export default {
   title: 'Inputs/TextField',
@@ -358,5 +360,18 @@ export const ExampleTextFieldWithUnitSelector = {
         />
       </Box>
     );
+  },
+};
+
+export const ExampleTextFieldWithEndAdornmentIconButton = {
+  render: Template,
+  args: {
+    ...ExampleTextField.args,
+    fullWidth: false,
+    endAdornmentIconButton: (
+      <IconButton aria-label="popup-icon-button">
+        <PopupIcon style={{ width: 16, height: 16 }} />
+      </IconButton>
+    ),
   },
 };
