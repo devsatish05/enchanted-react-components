@@ -31,6 +31,8 @@ export default {
   title: 'Inputs/TextField',
   component: TextField,
   argTypes: {
+    endAdornmentIconButton: { table: { disable: true } },
+    component: { table: { disable: true } },
     margin: {
       description:
         'If dense or normal, will adjust vertical spacing of this and contained components. "none" "dense"',
