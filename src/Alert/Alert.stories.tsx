@@ -109,6 +109,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               severity={AlertSeverity.WARNING}
               action={(
                 <IconButton
+                  aria-label="close"
                   variant={IconButtonVariants.WITH_PADDING}
                 >
                   <Close />
@@ -129,6 +130,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               severity={AlertSeverity.WARNING}
               action={(
                 <IconButton
+                  aria-label="rocket action"
                   variant={IconButtonVariants.WITH_PADDING}
                 >
                   <IconRocket />
@@ -151,11 +153,15 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               action={(
                 <>
                   <IconButton
+                    aria-label="rocket action"
                     variant={IconButtonVariants.WITH_PADDING}
                   >
                     <IconRocket />
                   </IconButton>
-                  <IconButton variant={IconButtonVariants.WITH_PADDING}>
+                  <IconButton
+                    aria-label="close"
+                    variant={IconButtonVariants.WITH_PADDING}
+                  >
                     <Close />
                   </IconButton>
                 </>
@@ -192,6 +198,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               severity={AlertSeverity.SUCCESS}
               action={(
                 <IconButton
+                  aria-label="close"
                   variant={IconButtonVariants.WITH_PADDING}
                 >
                   <Close />
@@ -212,6 +219,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               severity={AlertSeverity.SUCCESS}
               action={(
                 <IconButton
+                  aria-label="rocket action"
                   variant={IconButtonVariants.WITH_PADDING}
                 >
                   <IconRocket />
@@ -233,10 +241,10 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               severity={AlertSeverity.SUCCESS}
               action={(
                 <>
-                  <IconButton variant={IconButtonVariants.WITH_PADDING}>
+                  <IconButton aria-label="rocket action" variant={IconButtonVariants.WITH_PADDING}>
                     <IconRocket />
                   </IconButton>
-                  <IconButton variant={IconButtonVariants.WITH_PADDING}>
+                  <IconButton aria-label="close" variant={IconButtonVariants.WITH_PADDING}>
                     <Close />
                   </IconButton>
                 </>
@@ -273,6 +281,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               severity={AlertSeverity.ERROR}
               action={(
                 <IconButton
+                  aria-label="close"
                   variant={IconButtonVariants.WITH_PADDING}
                 >
                   <Close />
@@ -293,6 +302,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               severity={AlertSeverity.ERROR}
               action={(
                 <IconButton
+                  aria-label="rocket action"
                   variant={IconButtonVariants.WITH_PADDING}
                 >
                   <IconRocket />
@@ -314,10 +324,10 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               severity={AlertSeverity.ERROR}
               action={(
                 <>
-                  <IconButton variant={IconButtonVariants.WITH_PADDING}>
+                  <IconButton aria-label="rocket action" variant={IconButtonVariants.WITH_PADDING}>
                     <IconRocket />
                   </IconButton>
-                  <IconButton variant={IconButtonVariants.WITH_PADDING}>
+                  <IconButton aria-label="close" variant={IconButtonVariants.WITH_PADDING}>
                     <Close />
                   </IconButton>
                 </>
@@ -354,6 +364,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               severity={AlertSeverity.INFORMATION}
               action={(
                 <IconButton
+                  aria-label="close"
                   variant={IconButtonVariants.WITH_PADDING}
                 >
                   <Close />
@@ -374,6 +385,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               severity={AlertSeverity.INFORMATION}
               action={(
                 <IconButton
+                  aria-label="rocket action"
                   variant={IconButtonVariants.WITH_PADDING}
                 >
                   <IconRocket />
@@ -395,10 +407,10 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               severity={AlertSeverity.INFORMATION}
               action={(
                 <>
-                  <IconButton variant={IconButtonVariants.WITH_PADDING}>
+                  <IconButton aria-label="rocket action" variant={IconButtonVariants.WITH_PADDING}>
                     <IconRocket />
                   </IconButton>
-                  <IconButton variant={IconButtonVariants.WITH_PADDING}>
+                  <IconButton aria-label="close" variant={IconButtonVariants.WITH_PADDING}>
                     <Close />
                   </IconButton>
                 </>
@@ -439,6 +451,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               severity={AlertSeverity.WARNING}
               action={(
                 <IconButton
+                  aria-label="close"
                   variant={IconButtonVariants.WITH_PADDING}
                 >
                   <Close />
@@ -459,6 +472,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               severity={AlertSeverity.WARNING}
               action={(
                 <IconButton
+                  aria-label="rocket action"
                   variant={IconButtonVariants.WITH_PADDING}
                 >
                   <IconRocket />
@@ -480,10 +494,10 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               severity={AlertSeverity.WARNING}
               action={(
                 <>
-                  <IconButton variant={IconButtonVariants.WITH_PADDING}>
+                  <IconButton aria-label="rocket action" variant={IconButtonVariants.WITH_PADDING}>
                     <IconRocket />
                   </IconButton>
-                  <IconButton variant={IconButtonVariants.WITH_PADDING}>
+                  <IconButton aria-label="close" variant={IconButtonVariants.WITH_PADDING}>
                     <Close />
                   </IconButton>
                 </>
@@ -520,6 +534,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               severity={AlertSeverity.SUCCESS}
               action={(
                 <IconButton
+                  aria-label="close"
                   variant={IconButtonVariants.WITH_PADDING}
                 >
                   <Close />
@@ -540,6 +555,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               severity={AlertSeverity.SUCCESS}
               action={(
                 <IconButton
+                  aria-label="rocket action"
                   variant={IconButtonVariants.WITH_PADDING}
                 >
                   <IconRocket />
@@ -561,10 +577,10 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               severity={AlertSeverity.SUCCESS}
               action={(
                 <>
-                  <IconButton variant={IconButtonVariants.WITH_PADDING}>
+                  <IconButton aria-label="rocket action" variant={IconButtonVariants.WITH_PADDING}>
                     <IconRocket />
                   </IconButton>
-                  <IconButton variant={IconButtonVariants.WITH_PADDING}>
+                  <IconButton aria-label="close" variant={IconButtonVariants.WITH_PADDING}>
                     <Close />
                   </IconButton>
                 </>
@@ -601,6 +617,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               severity={AlertSeverity.ERROR}
               action={(
                 <IconButton
+                  aria-label="close"
                   variant={IconButtonVariants.WITH_PADDING}
                 >
                   <Close />
@@ -621,6 +638,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               severity={AlertSeverity.ERROR}
               action={(
                 <IconButton
+                  aria-label="rocket action"
                   variant={IconButtonVariants.WITH_PADDING}
                 >
                   <IconRocket />
@@ -642,10 +660,10 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               severity={AlertSeverity.ERROR}
               action={(
                 <>
-                  <IconButton variant={IconButtonVariants.WITH_PADDING}>
+                  <IconButton aria-label="rocket action" variant={IconButtonVariants.WITH_PADDING}>
                     <IconRocket />
                   </IconButton>
-                  <IconButton variant={IconButtonVariants.WITH_PADDING}>
+                  <IconButton aria-label="close" variant={IconButtonVariants.WITH_PADDING}>
                     <Close />
                   </IconButton>
                 </>
@@ -682,6 +700,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               severity={AlertSeverity.INFORMATION}
               action={(
                 <IconButton
+                  aria-label="close"
                   variant={IconButtonVariants.WITH_PADDING}
                 >
                   <Close />
@@ -702,6 +721,7 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               severity={AlertSeverity.INFORMATION}
               action={(
                 <IconButton
+                  aria-label="rocket action"
                   variant={IconButtonVariants.WITH_PADDING}
                 >
                   <IconRocket />
@@ -723,10 +743,10 @@ const VisualTestTemplate: StoryFn<typeof Alert> = (args) => {
               severity={AlertSeverity.INFORMATION}
               action={(
                 <>
-                  <IconButton variant={IconButtonVariants.WITH_PADDING}>
+                  <IconButton aria-label="rocket action" variant={IconButtonVariants.WITH_PADDING}>
                     <IconRocket />
                   </IconButton>
-                  <IconButton variant={IconButtonVariants.WITH_PADDING}>
+                  <IconButton aria-label="close" variant={IconButtonVariants.WITH_PADDING}>
                     <Close />
                   </IconButton>
                 </>
