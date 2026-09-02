@@ -184,6 +184,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITH_PADDING}
                 >
@@ -202,6 +203,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITH_PADDING}
                   className="force-to-focus"
@@ -221,6 +223,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITH_PADDING}
                   className="force-to-focusHover"
@@ -240,6 +243,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITH_PADDING}
                   disabled
@@ -259,6 +263,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITH_PADDING}
                   selected
@@ -278,6 +283,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITH_PADDING}
                   selected
@@ -298,6 +304,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITH_PADDING}
                   selected
@@ -318,6 +325,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITH_PADDING}
                   selected
@@ -338,6 +346,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITH_PADDING}
                   showendicon
@@ -357,6 +366,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITH_PADDING}
                   showendicon
@@ -377,6 +387,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITH_PADDING}
                   showendicon
@@ -397,6 +408,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITH_PADDING}
                   showendicon
@@ -417,6 +429,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITH_PADDING}
                   showendicon
@@ -437,6 +450,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITH_PADDING}
                   showendicon
@@ -458,6 +472,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITH_PADDING}
                   showendicon
@@ -479,6 +494,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITH_PADDING}
                   showendicon
@@ -500,6 +516,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITH_PADDING}
                   label="Label"
@@ -519,6 +536,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITH_PADDING}
                   label="Label"
@@ -539,6 +557,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITH_PADDING}
                   label="Label"
@@ -559,6 +578,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITH_PADDING}
                   label="Label"
@@ -579,6 +599,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITH_PADDING}
                   label="Label"
@@ -599,6 +620,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITH_PADDING}
                   label="Label"
@@ -620,6 +642,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITH_PADDING}
                   label="Label"
@@ -641,6 +664,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITH_PADDING}
                   label="Label"
@@ -668,6 +692,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                 >
@@ -686,6 +711,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   className="force-to-focus"
                   variant={IconButtonVariants.WITHOUT_PADDING}
@@ -705,6 +731,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   className="force-to-focusHover"
                   variant={IconButtonVariants.WITHOUT_PADDING}
@@ -724,6 +751,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   disabled
@@ -743,6 +771,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   selected
@@ -762,6 +791,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   selected
@@ -782,6 +812,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   selected
@@ -802,6 +833,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   selected
@@ -822,6 +854,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   showendicon
@@ -841,6 +874,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   className="force-to-focus"
                   variant={IconButtonVariants.WITHOUT_PADDING}
@@ -861,6 +895,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   className="force-to-focusHover"
                   variant={IconButtonVariants.WITHOUT_PADDING}
@@ -881,6 +916,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   showendicon
@@ -901,6 +937,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   showendicon
@@ -921,6 +958,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   showendicon
@@ -942,6 +980,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   showendicon
@@ -963,6 +1002,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   showendicon
@@ -984,6 +1024,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   label="Label"
@@ -1003,6 +1044,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   className="force-to-focus"
                   variant={IconButtonVariants.WITHOUT_PADDING}
@@ -1023,6 +1065,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   className="force-to-focusHover"
                   variant={IconButtonVariants.WITHOUT_PADDING}
@@ -1043,6 +1086,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   label="Label"
@@ -1063,6 +1107,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   label="Label"
@@ -1083,6 +1128,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   label="Label"
@@ -1104,6 +1150,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   label="Label"
@@ -1125,6 +1172,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.SMALL}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   label="Label"
@@ -1156,6 +1204,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITH_PADDING}
                 >
@@ -1174,6 +1223,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITH_PADDING}
                   className="force-to-focus"
@@ -1193,6 +1243,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITH_PADDING}
                   className="force-to-focusHover"
@@ -1212,6 +1263,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITH_PADDING}
                   disabled
@@ -1231,6 +1283,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITH_PADDING}
                   selected
@@ -1250,6 +1303,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITH_PADDING}
                   selected
@@ -1270,6 +1324,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITH_PADDING}
                   selected
@@ -1290,6 +1345,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITH_PADDING}
                   selected
@@ -1310,6 +1366,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITH_PADDING}
                   showendicon
@@ -1329,6 +1386,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITH_PADDING}
                   showendicon
@@ -1349,6 +1407,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITH_PADDING}
                   showendicon
@@ -1369,6 +1428,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITH_PADDING}
                   showendicon
@@ -1389,6 +1449,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITH_PADDING}
                   showendicon
@@ -1409,6 +1470,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITH_PADDING}
                   showendicon
@@ -1430,6 +1492,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITH_PADDING}
                   showendicon
@@ -1451,6 +1514,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITH_PADDING}
                   showendicon
@@ -1472,6 +1536,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITH_PADDING}
                   label="Label"
@@ -1491,6 +1556,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITH_PADDING}
                   label="Label"
@@ -1511,6 +1577,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITH_PADDING}
                   label="Label"
@@ -1531,6 +1598,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITH_PADDING}
                   label="Label"
@@ -1551,6 +1619,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITH_PADDING}
                   label="Label"
@@ -1571,6 +1640,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITH_PADDING}
                   label="Label"
@@ -1592,6 +1662,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITH_PADDING}
                   label="Label"
@@ -1613,6 +1684,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITH_PADDING}
                   label="Label"
@@ -1640,6 +1712,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                 >
@@ -1658,6 +1731,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   className="force-to-focus"
                   variant={IconButtonVariants.WITHOUT_PADDING}
@@ -1677,6 +1751,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   className="force-to-focusHover"
                   variant={IconButtonVariants.WITHOUT_PADDING}
@@ -1696,6 +1771,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   disabled
@@ -1715,6 +1791,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   selected
@@ -1734,6 +1811,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   selected
@@ -1754,6 +1832,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   selected
@@ -1774,6 +1853,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   selected
@@ -1794,6 +1874,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   showendicon
@@ -1813,6 +1894,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   showendicon
@@ -1833,6 +1915,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   showendicon
@@ -1853,6 +1936,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   showendicon
@@ -1873,6 +1957,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   showendicon
@@ -1893,6 +1978,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   showendicon
@@ -1914,6 +2000,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   showendicon
@@ -1935,6 +2022,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   showendicon
@@ -1956,6 +2044,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   label="Label"
@@ -1975,6 +2064,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   label="Label"
@@ -1995,6 +2085,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   label="Label"
@@ -2015,6 +2106,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   label="Label"
@@ -2035,6 +2127,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   label="Label"
@@ -2055,6 +2148,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   label="Label"
@@ -2076,6 +2170,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   label="Label"
@@ -2097,6 +2192,7 @@ const VisualTestTemplate: StoryFn<typeof IconButton> = (args) => {
               <Grid size={{ xs: 3 }} paddingBottom={2}>
                 <IconButton
                   value="default"
+                  aria-label="Add"
                   size={IconButtonSizes.MEDIUM}
                   variant={IconButtonVariants.WITHOUT_PADDING}
                   label="Label"
@@ -2239,6 +2335,7 @@ InteractiveExample.parameters = {
 InteractiveExample.args = {
   // @ts-ignore - this attribute is need to disable all controls in the InteractiveExample, but this attribute is not part of the IconButtonProps
   interactive: true,
+  'aria-label': 'Add',
 };
 
 export const VisualTest = VisualTestTemplate.bind({});

@@ -201,6 +201,7 @@ const IconButton = React.forwardRef(({ showendicon: showendiconProp, ...rawProps
           ref={forwardRef as ((instance: HTMLButtonElement | null) => void)}
           role="button"
           aria-disabled={props.disabled}
+          aria-label={props['aria-label'] ?? props.label}
           className={`${props.selected ? 'selected' : ''} ${props.className}`}
         >
           {props.children}

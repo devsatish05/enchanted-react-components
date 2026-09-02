@@ -116,21 +116,25 @@ const VisualTestTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => {
                 >
                   <ToggleButton
                     value="default1"
+                    aria-label="Add default1"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default2"
+                    aria-label="Add default2"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default3"
+                    aria-label="Add default3"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default4"
+                    aria-label="Add default4"
                   >
                     <IconAdd />
                   </ToggleButton>
@@ -152,21 +156,25 @@ const VisualTestTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => {
                 >
                   <ToggleButton
                     value="default1"
+                    aria-label="Add default1"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default2"
+                    aria-label="Add default2"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default3"
+                    aria-label="Add default3"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default4"
+                    aria-label="Add default4"
                   >
                     <IconAdd />
                   </ToggleButton>
@@ -188,21 +196,25 @@ const VisualTestTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => {
                 >
                   <ToggleButton
                     value="default1"
+                    aria-label="Add default1"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default2"
+                    aria-label="Add default2"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default3"
+                    aria-label="Add default3"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default4"
+                    aria-label="Add default4"
                   >
                     <IconAdd />
                   </ToggleButton>
@@ -224,21 +236,25 @@ const VisualTestTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => {
                 >
                   <ToggleButton
                     value="default1"
+                    aria-label="Add default1"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default2"
+                    aria-label="Add default2"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default3"
+                    aria-label="Add default3"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default4"
+                    aria-label="Add default4"
                   >
                     <IconAdd />
                   </ToggleButton>
@@ -260,21 +276,25 @@ const VisualTestTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => {
                 >
                   <ToggleButton
                     value="default1"
+                    aria-label="Add default1"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default2"
+                    aria-label="Add default2"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default3"
+                    aria-label="Add default3"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default4"
+                    aria-label="Add default4"
                   >
                     <IconAdd />
                   </ToggleButton>
@@ -296,21 +316,25 @@ const VisualTestTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => {
                 >
                   <ToggleButton
                     value="default1"
+                    aria-label="Add default1"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default2"
+                    aria-label="Add default2"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default3"
+                    aria-label="Add default3"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default4"
+                    aria-label="Add default4"
                   >
                     <IconAdd />
                   </ToggleButton>
@@ -341,21 +365,25 @@ const VisualTestTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => {
                 >
                   <ToggleButton
                     value="default1"
+                    aria-label="Add default1"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default2"
+                    aria-label="Add default2"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default3"
+                    aria-label="Add default3"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default4"
+                    aria-label="Add default4"
                   >
                     <IconAdd />
                   </ToggleButton>
@@ -377,21 +405,25 @@ const VisualTestTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => {
                 >
                   <ToggleButton
                     value="default1"
+                    aria-label="Add default1"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default2"
+                    aria-label="Add default2"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default3"
+                    aria-label="Add default3"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default4"
+                    aria-label="Add default4"
                   >
                     <IconAdd />
                   </ToggleButton>
@@ -413,21 +445,25 @@ const VisualTestTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => {
                 >
                   <ToggleButton
                     value="default1"
+                    aria-label="Add default1"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default2"
+                    aria-label="Add default2"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default3"
+                    aria-label="Add default3"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default4"
+                    aria-label="Add default4"
                   >
                     <IconAdd />
                   </ToggleButton>
@@ -449,21 +485,25 @@ const VisualTestTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => {
                 >
                   <ToggleButton
                     value="default1"
+                    aria-label="Add default1"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default2"
+                    aria-label="Add default2"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default3"
+                    aria-label="Add default3"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default4"
+                    aria-label="Add default4"
                   >
                     <IconAdd />
                   </ToggleButton>
@@ -485,21 +525,25 @@ const VisualTestTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => {
                 >
                   <ToggleButton
                     value="default1"
+                    aria-label="Add default1"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default2"
+                    aria-label="Add default2"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default3"
+                    aria-label="Add default3"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default4"
+                    aria-label="Add default4"
                   >
                     <IconAdd />
                   </ToggleButton>
@@ -521,21 +565,25 @@ const VisualTestTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => {
                 >
                   <ToggleButton
                     value="default1"
+                    aria-label="Add default1"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default2"
+                    aria-label="Add default2"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default3"
+                    aria-label="Add default3"
                   >
                     <IconAdd />
                   </ToggleButton>
                   <ToggleButton
                     value="default4"
+                    aria-label="Add default4"
                   >
                     <IconAdd />
                   </ToggleButton>
@@ -556,11 +604,13 @@ const InteractiveExampleTemplate: StoryFn<typeof ToggleButtonGroup> = (args) => 
     >
       <ToggleButton
         value="sample"
+        aria-label="Add sample"
       >
         <IconAdd />
       </ToggleButton>
       <ToggleButton
         value="sample2"
+        aria-label="Add sample2"
       >
         <IconAdd />
       </ToggleButton>

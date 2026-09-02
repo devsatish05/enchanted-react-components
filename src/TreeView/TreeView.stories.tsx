@@ -311,14 +311,14 @@ export const InteractiveExample = {
 /* ── Visual test ─────────────────────────────────── */
 const VisualTestTemplate: StoryFn<object> = () => {
   const overflowAction = (
-    <IconButton size="small" variant={IconButtonVariants.WITHOUT_PADDING} showendicon={0}>
+    <IconButton size="small" variant={IconButtonVariants.WITHOUT_PADDING} showendicon={0} aria-label="More actions">
       <OverflowMenuHorizontalIcon />
     </IconButton>
   );
   const hoverActionButtons = (
     <>
-      <IconButton size="small" variant={IconButtonVariants.WITHOUT_PADDING} showendicon={0}><EditIcon /></IconButton>
-      <IconButton size="small" variant={IconButtonVariants.WITHOUT_PADDING} showendicon={0}><TrashCanIcon /></IconButton>
+      <IconButton size="small" variant={IconButtonVariants.WITHOUT_PADDING} showendicon={0} aria-label="Edit"><EditIcon /></IconButton>
+      <IconButton size="small" variant={IconButtonVariants.WITHOUT_PADDING} showendicon={0} aria-label="Delete"><TrashCanIcon /></IconButton>
     </>
   );
 
